@@ -6,8 +6,9 @@ COPY . .
 ARG APP_VERSION=dev
 ARG APP_COMMIT=unknown
 ARG APP_BRANCH=local
+ARG TARGETARCH
 
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build \
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=${TARGETARCH} go build \
     -trimpath \
     -ldflags "-s -w -X main.version=${APP_VERSION} -X main.commit=${APP_COMMIT} -X main.branch=${APP_BRANCH}" \
     -o /out/server ./cmd/server
