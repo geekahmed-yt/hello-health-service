@@ -103,3 +103,5 @@ func writeJSON(w http.ResponseWriter, status int, payload any) {
 	enc.SetEscapeHTML(false)
 	_ = enc.Encode(payload)
 }
+
+// This a comment
