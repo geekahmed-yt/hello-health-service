@@ -1,5 +1,7 @@
 package app
 
+// This file contains the HTTP server implementation for the hello-health-service application.
+
 import (
 	"encoding/json"
 	"net/http"
