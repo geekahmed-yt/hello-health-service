@@ -38,3 +38,5 @@ func envOrDefault(key, fallback string) string {
 	}
 	return value
 }
+
+// This file is the entry point for the hello-health-service application. It reads configuration from environment variables, sets up an HTTP server, and starts listening for requests. The application responds to health check requests with its version, commit, and branch information.
